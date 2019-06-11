@@ -1,0 +1,21 @@
+cask_args appdir: '/Applications'
+
+tap 'homebrew/bundle'
+tap 'homebrew/cask'
+tap 'homebrew/core'
+
+# install packages
+brew 'bash-completion'
+brew 'gnupg'
+brew 'git'
+brew 'wget'
+
+# Casks
+cask 'sublime-text'
+cask 'visual-studio-code'
+cask 'slack'
+cask 'google-chrome'
+cask 'iterm2'
+cask 'tunnelblick'
+cask 'docker'
+cask 'zoomus'
