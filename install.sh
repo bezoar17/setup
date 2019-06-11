@@ -33,11 +33,16 @@ done
 
 print_info "Running sub-shells..."
 
-for SHELL in $ROOT_DIR/shells/*
-do
-  print_info "Running $(basename $SHELL)..."
-  sh $SHELL
-done
+if [ $# -eq 0 ]; then
+  for SHELL in $ROOT_DIR/shells/*
+  do
+    print_info "Running $(basename $SHELL)..."
+    sh $SHELL
+  done
+else
+  echo "Running $(ls $ROOT_DIR/shells/$1*)..."
+  ls $ROOT_DIR/shells/$1* | sh
+fi
 
 # print_info "The work is done, you should now delete this folder."
 # ask_for_confirmation "Should we go ahead and delete it for you ?"
