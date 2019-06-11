@@ -21,5 +21,9 @@ fi
 
 print_info "Updating default user preferences..."
 
-rm -rf "$DIR/Packages/User/Preferences.sublime-settings"
+if [[ -d "$DIR/Packages/User" ]]; then
+  rm -rf "$DIR/Packages/User/Preferences.sublime-settings"
+else
+  mkdir "$DIR/Packages/User"
+fi
 cp "$BASE_DIR" "$DIR/Packages/User"
