@@ -40,14 +40,15 @@ if [ $# -eq 0 ]; then
     sh $SHELL
   done
 else
-  echo "Running $(ls $ROOT_DIR/shells/$1*)..."
-  ls $ROOT_DIR/shells/$1* | sh
+  FILE="$(ls $ROOT_DIR/shells/$1*)"
+  echo "Running $FILE..."
+  sh $FILE
 fi
 
 # print_info "The work is done, you should now delete this folder."
 # ask_for_confirmation "Should we go ahead and delete it for you ?"
 # case $REPLY in
-#   [Yy]* ) cd $HOME && rm -r $ROOT_DIR && exit;;
+#   [Yy]* ) cd $HOME && rm -r $ROOT_DIR && cd $HOME && exit;;
 #   [Nn]* ) exit;;
 #   * ) echo "Please answer, yes or no"
 # esac

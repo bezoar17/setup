@@ -6,7 +6,8 @@ if [[ ! -d "$HOME/Development/dash" ]]; then
   print_info "Installing..."
 
   # Create a Development folder
-  cd ~ && mkdir Development && cd "$_"
+  cd $HOME && mkdir Development
+  cd Development
 
   # Clone the repo
   git clone https://github.com/aggrata/dash.git
