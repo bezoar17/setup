@@ -1,21 +1,43 @@
 cask_args appdir: '/Applications'
 
-tap 'homebrew/bundle'
-tap 'homebrew/cask'
-tap 'homebrew/core'
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
 
 # install packages
 brew 'bash-completion'
 brew 'gnupg'
 brew 'git'
+brew 'tree'
+brew 'pstree'
 brew 'wget'
+brew 'youtube-dl'
+brew 'asciinema'
 
 # Casks
 cask 'sublime-text'
 cask 'visual-studio-code'
+cask 'folx'
 cask 'slack'
 cask 'google-chrome'
+cask 'firefox-developer-edition'
+cask 'firefox'
+cask 'dynalist'
 cask 'iterm2'
 cask 'tunnelblick'
+cask 'spotify'
+cask 'iterm2'
+cask 'tableplus'
+cask 'p4merge'
+cask 'postman'
+cask 'ngrok'
 cask 'docker'
+cask 'spectacle'
+cask 'handbrake'
+cask 'mounty'
+cask 'kindle'
+cask 'flux'
+cask 'vlc'
+cask 'soda-player'
 cask 'zoomus'
+cask 'mounty'

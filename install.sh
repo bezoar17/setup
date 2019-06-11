@@ -39,15 +39,11 @@ do
   sh $SHELL
 done
 
-# Install aliases
-if [ -f $ROOT_DIR/config/.aliases ]; then
-  source "$ROOT_DIR/config/.aliases"
-fi
+# print_info "The work is done, you should now delete this folder."
+# ask_for_confirmation "Should we go ahead and delete it for you ?"
+# case $REPLY in
+#   [Yy]* ) cd $HOME && rm -r $ROOT_DIR && exit;;
+#   [Nn]* ) exit;;
+#   * ) echo "Please answer, yes or no"
+# esac
 
-# print_info "Symlinking files..."
-# declare -a SYMLINKS=(`ls $ROOT_DIR/symlinks | sed 's/^/symlinks\//'`)
-# symlink_dot ${SYMLINKS[@]}
-
-# sh "$ROOT_DIR/core/brew-services.sh"
-
-# exec zsh

@@ -1,0 +1,27 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"10% Too Dull for My Tastes Color Scheme",
+		"A File Icon",
+		"Atomic Color Scheme",
+		"ayu",
+		"BeautifyRuby",
+		"Better RSpec",
+		"Boxy Theme",
+		"Boxy Theme Addon - Mono File Icons",
+		"Dracula Color Scheme",
+		"GitGutter",
+		"MarkdownLivePreview",
+		"Materialize",
+		"Neon Color Scheme",
+		"Package Control",
+		"Pretty JSON",
+		"SqlBeautifier",
+		"SublimeLinter-rubocop",
+		"Trimmer"
+	]
+}

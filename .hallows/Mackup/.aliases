@@ -4,8 +4,12 @@
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
+# Copy the files downloaded by soda player to Downloads
+alias sodafy='cd $TMPDIR/sodaplayer/data/torrent && cp -R . $HOME/Downloads/soda_p'
+
 # brew cleanup
 # https://gist.github.com/indiesquidge/ec010eca3ffa254788c2
 alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
 
-# add your own aliases which should be installed
+# [DEV] fe_build command
+alias fe_build='cd $HOME/Development/dash/fe && sudo npm i && npm rebuild node-sass && sudo npm run build:ruby-prod'

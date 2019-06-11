@@ -19,11 +19,19 @@ else
   print_success "Skipping..."
 fi
 
-print_info "Updating default user preferences..."
+# print_info "Updating default user preferences..."
 
-if [[ -d "$DIR/Packages/User" ]]; then
-  rm -rf "$DIR/Packages/User/Preferences.sublime-settings"
-else
-  mkdir "$DIR/Packages/User"
-fi
-cp "$BASE_DIR" "$DIR/Packages/User"
+# if [[ -d "$DIR/Packages/User" ]]; then
+#   rm -rf "$DIR/Packages/User/Preferences.sublime-settings"
+# else
+#   mkdir "$DIR/Packages/User"
+# fi
+# cp "$BASE_DIR" "$DIR/Packages/User"
+
+# print_success "Completed..."
+
+print_info "Creating a shortcut for sublime_text as subl"
+
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+
+print_success "Completed..."
