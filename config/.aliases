@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# some are taken from https://github.com/mathiasbynens/dotfiles/
+
+# Lock the screen (when going AFK)
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# Copy the files downloaded by soda player to Downloads
+alias sodafy='cd $TMPDIR/sodaplayer/data/torrent && cp -R . /Users/$USER/Downloads/soda_p'
+
+# brew cleanup
+# https://gist.github.com/indiesquidge/ec010eca3ffa254788c2
+alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
+
+# [DEV] fe_build command
+alias fe_build='cd /Users/kashyap/Development/dash/fe && sudo npm i && npm rebuild node-sass && sudo npm run build:ruby-prod'
