@@ -33,21 +33,22 @@ done
 
 print_info "Running sub-shells..."
 
-for SHELL in $ROOT_DIR/shells/*
-do
-  print_info "Running $(basename $SHELL)..."
-  sh $SHELL
-done
-
-# Install aliases
-if [ -f $ROOT_DIR/config/.aliases ]; then
-  source "$ROOT_DIR/config/.aliases"
+if [ $# -eq 0 ]; then
+  for SHELL in $ROOT_DIR/shells/*
+  do
+    print_info "Running $(basename $SHELL)..."
+    sh $SHELL
+  done
+else
+  FILE="$(ls $ROOT_DIR/shells/$1*)"
+  echo "Running $FILE..."
+  sh $FILE
 fi
 
-# print_info "Symlinking files..."
-# declare -a SYMLINKS=(`ls $ROOT_DIR/symlinks | sed 's/^/symlinks\//'`)
-# symlink_dot ${SYMLINKS[@]}
-
-# sh "$ROOT_DIR/core/brew-services.sh"
-
-# exec zsh
+# print_info "The work is done, you should now delete this folder."
+# ask_for_confirmation "Should we go ahead and delete it for you ?"
+# case $REPLY in
+#   [Yy]* ) cd $HOME && rm -r $ROOT_DIR && cd $HOME && exit;;
+#   [Nn]* ) exit;;
+#   * ) echo "Please answer, yes or no"
+# esac
