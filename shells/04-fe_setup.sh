@@ -20,7 +20,8 @@ if ! brew list nvm &>/dev/null; then
   brew install yarn
 
   if [[ -d "$HOME/Development/dash" ]]; then
-    cd ~/Development/dash && yarn install
+    cd ~/Development/dash/fe
+    yarn install
   fi
 
   print_success "Completed..."
