@@ -2,6 +2,9 @@
 
 echo "=> Front End Setup"
 
+# FOR Repeated use, run the following command and reopen terminal before using this
+# brew uninstall nvm && brew uninstall yarn && brew uninstall node && rm -rf ~/.nvm;
+
 if ! brew list nvm &>/dev/null; then
   print_info "Installing..."
 
