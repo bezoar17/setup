@@ -27,11 +27,10 @@ print_success "Completed..."
 
 print_info "Updating default user preferences..."
 
-if [[ -d "$DIR/Packages/User" ]]; then
-  rm -rf "$DIR/Packages/User/Preferences.sublime-settings"
-else
+if [[ ! -d "$DIR/Packages/User" ]]; then
   mkdir "$DIR/Packages/User"
+  cp "$BASE_DIR" "$DIR/Packages/User"
+  print_success "Completed..."
+else
+  print_success "Skipping as defaults already present..."
 fi
-cp "$BASE_DIR" "$DIR/Packages/User"
-
-print_success "Completed..."
