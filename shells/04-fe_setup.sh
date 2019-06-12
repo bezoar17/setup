@@ -9,9 +9,11 @@ if ! brew list nvm &>/dev/null; then
   brew install nvm
   mkdir ~/.nvm
 
-  echo 'export NVM_DIR=\"$HOME/.nvm\"' >> ~/.bash_profile
+  echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.bash_profile
   echo 'source $(brew --prefix nvm)/nvm.sh' >> ~/.bash_profile
   # also install these on zshrc
+
+  source ~/.bash_profile
 
   # Install node
   nvm install v8.11.0
@@ -22,6 +24,7 @@ if ! brew list nvm &>/dev/null; then
   if [[ -d "$HOME/Development/dash" ]]; then
     cd ~/Development/dash/fe
     yarn install
+    yarn add typings
   fi
 
   print_success "Completed..."

@@ -20,7 +20,8 @@ export -f insert_to_file_after_line_number
 export -f uncomment_line
 export -f prepend_string_to_file
 
-ask_for_sudo
+# disabled for everything, in any case, should atleast be disabled for fe_setup
+# ask_for_sudo
 
 while true; do
   ask_for_confirmation "Warning: This shell will overwrite your current workspace setup. Proceed?"
