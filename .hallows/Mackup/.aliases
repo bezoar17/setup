@@ -11,9 +11,25 @@ alias sodafy='cd $TMPDIR/sodaplayer/data/torrent && cp -R . $HOME/Downloads/soda
 # https://gist.github.com/indiesquidge/ec010eca3ffa254788c2
 alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
 
-# [DEV] fe_build command
-alias fe_build='cd $HOME/Development/dash/fe && sudo npm i && npm rebuild node-sass && sudo npm run build:ruby-prod'
+# ===============[DEV]===============
+# dash repo
+alias dash='cd $HOME/Development/dash'
 
+# fe_build command
+alias fe_build='cd $HOME/Development/dash/fe && npm run dev:ruby-prod'
+
+# storybook
+alias fe_storybooks='cd $HOME/Development/dash/fem && npm run storybook'
+
+# docker related commands
+alias dc_bash='docker-compose exec app /bin/bash'
+
+# docker related commands
+alias dc_run_bash='docker-compose exec run /bin/bash'
+# ===============[DEV]===============
+
+
+# CONDITIONAL BASED ON REPO NAMES ETC.
 # USE MACKUP TO UPDATE LATEST SETTINGS
 alias sync_setup='cd ~/Development/setup && git co personal/kashyap && mackup backup && cp -r ~/.hallows/ ~/Development/setup/.hallows'
 alias push_setup='cd ~/Development/setup && git co personal/kashyap && git add . && git ci -m "update mackup" && git ps'
