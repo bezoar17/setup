@@ -15,12 +15,13 @@ if ! brew list nvm &>/dev/null; then
 
   # Install node
   nvm install v8.11.0
+  nvm use 8.11.0
 
   # Install yarn
   brew install yarn
 
-  if [[ -d "$HOME/Development/dash" ]]; then
-    cd ~/Development/dash && yarn install
+  if [[ -d "$HOME/$DEV_DIR/dash" ]]; then
+    cd ~/$DEV_DIR/dash && yarn install
   fi
 
   print_success "Completed..."

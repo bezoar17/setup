@@ -2,12 +2,12 @@
 
 echo "=> Setup Track Repo"
 
-if [[ ! -d "$HOME/Development/dash" ]]; then
+if [[ ! -d "$HOME/$DEV_DIR/dash" ]]; then
   print_info "Installing..."
 
   # Create a Development folder
-  cd $HOME && mkdir Development
-  cd Development
+  cd $HOME && mkdir $DEV_DIR
+  cd $DEV_DIR
 
   # Clone the repo
   git clone https://github.com/aggrata/dash.git

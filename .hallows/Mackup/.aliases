@@ -13,3 +13,7 @@ alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
 
 # [DEV] fe_build command
 alias fe_build='cd $HOME/Development/dash/fe && sudo npm i && npm rebuild node-sass && sudo npm run build:ruby-prod'
+
+# USE MACKUP TO UPDATE LATEST SETTINGS
+alias sync_setup='cd ~/Development/setup && git co personal/kashyap && mackup backup && cp -r ~/.hallows/ ~/Development/setup/.hallows'
+alias push_setup='cd ~/Development/setup && git co personal/kashyap && git add . && git ci -m "update mackup" && git ps'
