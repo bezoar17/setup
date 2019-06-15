@@ -1,0 +1,5 @@
+{
+    "shell_cmd": "echo \"$project\" && ruby \\$HOME/Development/muggle_studies/test/run_solution_tests.rb \"$file\"",
+    "selector": "source.ruby",
+    "file_regex": "^\\s*File \"(...*?)\", line ([0-9]*)"
+}

@@ -12,7 +12,7 @@ fi
 
 print_info "Brewing from file..."
 
-if [[ -f "$ROOT_DIR/config/Brewfile") ]]; then
+if [[ -f "$ROOT_DIR/config/Brewfile" ]]; then
 
   brew bundle --verbose --file="$ROOT_DIR/config/Brewfile"
   brew cleanup && brew upgrade && brew update && brew doctor

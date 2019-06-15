@@ -323,6 +323,57 @@ chflags nohidden ~/Library
 # Show the /Volumes folder
 #sudo chflags nohidden /Volumes
 
+##################################################################################################
+# TRACK PAD - Mojave
+##################################################################################################
+# defaults read com.apple.AppleMultitouchTrackpad
+# {
+#     ActuateDetents = 1;
+#     Clicking = 1;
+#     DragLock = 0;
+#     Dragging = 0;
+#     FirstClickThreshold = 1;
+#     ForceSuppressed = 0;
+#     SecondClickThreshold = 1;
+#     TrackpadCornerSecondaryClick = 0;
+#     TrackpadFiveFingerPinchGesture = 2;
+#     TrackpadFourFingerHorizSwipeGesture = 2;
+#     TrackpadFourFingerPinchGesture = 2;
+#     TrackpadFourFingerVertSwipeGesture = 2;
+#     TrackpadHandResting = 1;
+#     TrackpadHorizScroll = 1;
+#     TrackpadMomentumScroll = 1;
+#     TrackpadPinch = 1;
+#     TrackpadRightClick = 1;
+#     TrackpadRotate = 1;
+#     TrackpadScroll = 1;
+#     TrackpadThreeFingerDrag = 0;
+#     TrackpadThreeFingerHorizSwipeGesture = 2;
+#     TrackpadThreeFingerTapGesture = 0;
+#     TrackpadThreeFingerVertSwipeGesture = 2;
+#     TrackpadTwoFingerDoubleTapGesture = 1;
+#     TrackpadTwoFingerFromRightEdgeSwipeGesture = 3;
+#     USBMouseStopsTrackpad = 0;
+#     UserPreferences = 1;
+#     version = 12;
+# }
+##################################################################################################
+
+# enable 3 finger drag
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
+
+# tap to click
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+
+# disable 3 finger left-right swipes to change full screen apps
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerHorizSwipeGesture -int 0
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerHorizSwipeGesture -int 0
+
+##################################################################################################
+# TRACK PAD - Mojave
+##################################################################################################
+
+
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
@@ -404,6 +455,12 @@ chflags nohidden ~/Library
 # Bottom left screen corner → Start screen saver
 #defaults write com.apple.dock wvous-bl-corner -int 5
 #defaults write com.apple.dock wvous-bl-modifier -int 0
+
+# Icon size of Dock items
+defaults write com.apple.dock tilesize -int 46
+
+# Don’t show recent applications in Dock
+defaults write com.apple.dock "show-recents" -int 0
 
 ###############################################################################
 # Terminal & iTerm 2                                                          #
