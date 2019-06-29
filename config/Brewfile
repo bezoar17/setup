@@ -13,6 +13,7 @@ brew 'pstree'
 brew 'wget'
 brew 'youtube-dl'
 brew 'asciinema'
+brew 'awscli'
 
 # Casks
 cask 'sublime-text'

@@ -1,7 +1,7 @@
 {
 	"color_scheme": "Packages/Dracula Color Scheme/Dracula.tmTheme",
 	"font_face": "menlo",
-	"font_size": 13,
+	"font_size": 14,
 	"ignored_packages":
 	[
 		"Boxy Theme",
