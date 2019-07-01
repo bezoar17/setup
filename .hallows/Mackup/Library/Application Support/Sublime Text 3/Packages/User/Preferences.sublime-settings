@@ -4,8 +4,6 @@
 	"font_size": 14,
 	"ignored_packages":
 	[
-		"Boxy Theme",
-		"Boxy Theme Addon - Mono File Icons",
 		"Vintage"
 	],
 	"tab_size": 2,
