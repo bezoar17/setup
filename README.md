@@ -13,6 +13,15 @@ Just run `curl -L setup.vkashyap.now.sh | sh`  on any mac to kickstart the insta
 ## What is this about ?
 Setting up a new machine or keeping the dotfiles/config files for applications in sync. This repo will be updated regularly to ensure that any new machine can be setup with the same applications/configs etc, using a single command. To ensure this happens, any new application installation or config changes should be done through the main `install.sh` command itself.
 
+## How to maintain this ?
+You are essentially keeping a track of all the changes made to your mac in this repo. If you install a new app, do it through install.sh.
+
+If you change a setting try doing it through .macos preferences file.
+If you add a repo to be cloned, do it through this.
+If not, atleast track what needs to be done apart from just running install.sh once.
+
+
+
 ## Disclaimer
 If you want to use this, do not copy the repo blindly, fork it, make changes acc. to your convenience and only then proceed with the installation.
 

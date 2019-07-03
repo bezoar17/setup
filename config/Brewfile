@@ -14,6 +14,7 @@ brew 'wget'
 brew 'youtube-dl'
 brew 'asciinema'
 brew 'awscli'
+brew 'jq'
 
 # Casks
 cask 'sublime-text'

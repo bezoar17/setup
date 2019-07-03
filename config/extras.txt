@@ -1,0 +1,1 @@
+Run aws configure separately

@@ -2,7 +2,7 @@
 
 # config related
 REPO_NAME="setup"
-DEV_DIR="Development"
+DEV_DIR="$HOME/Development"
 MACKUP_PATH_FROM_HOME=".hallows"
 # config related
 
@@ -13,6 +13,9 @@ cd $ROOT_DIR
 source "$ROOT_DIR/functions.sh"
 
 export ROOT_DIR
+export DEV_DIR
+export REPO_NAME
+export MACKUP_PATH_FROM_HOME
 
 export -f print_info
 export -f print_success
@@ -38,7 +41,7 @@ done
 
 print_info "Running sub-shells..."
 
-if [ $# -eq 0 ]; then
+if [ $# -eq 0 ]; then # no arguments are provided
   for SHELL in $ROOT_DIR/shells/*
   do
     print_info "Running $(basename $SHELL)..."
@@ -50,6 +53,9 @@ else
   sh $FILE
 fi
 
+# NOTE: this should only be done for cases where this has to be run only once,
+# maybe for setting up new machines, hence deletion is delegated to index.sh
+
 # print_info "The work is done, you should now delete this folder."
 # ask_for_confirmation "Should we go ahead and delete it for you ?"
 # case $REPLY in
@@ -57,4 +63,3 @@ fi
 #   [Nn]* ) exit;;
 #   * ) echo "Please answer, yes or no"
 # esac
-
