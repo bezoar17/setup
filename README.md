@@ -5,7 +5,6 @@ Just run `curl -L setup.vkashyap.now.sh | sh`  on any mac to kickstart the insta
 
 ## TO-DO
 + Update Readme
-+ Update repo installation shell
 + configurize directories
 + configurize mackup directory
 + ensure contextual aliases are defined through configs
@@ -20,8 +19,6 @@ If you change a setting try doing it through .macos preferences file.
 If you add a repo to be cloned, do it through this.
 If not, atleast track what needs to be done apart from just running install.sh once.
 
-
-
 ## Disclaimer
 If you want to use this, do not copy the repo blindly, fork it, make changes acc. to your convenience and only then proceed with the installation.
 
@@ -31,7 +28,7 @@ The main entry point for this is `install.sh`. It runs. all the shells present i
 Some of most commonly used shells are
   + mac os
   + homebrew
-  + repo setup
+  + repo setup (config/repos.json)
   + mackup (used for syncing all the dotfiles, best way to do this really)
   + extra installations
 

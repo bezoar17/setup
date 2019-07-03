@@ -27,15 +27,16 @@ export -f modify_line
 export -f insert_to_file_after_line_number
 export -f uncomment_line
 export -f prepend_string_to_file
-export -f ask_for_confirmation
+export -f ask
+export -f ask_for_confirmation # should always be used in a subprocess, i.e, (). see repo setup for e.g.
+export -f ask_for_confirmed_input
 
 ask_for_sudo
 
 ask_for_confirmation "Warning: This shell will overwrite your current workspace setup. Proceed?"
 
-print_info "Running sub-shells..."
-
 if [ $# -eq 0 ]; then # no arguments are provided
+  print_info "Running all sub-shells..."
   for SHELL in $ROOT_DIR/shells/*
   do
     print_info "Running $(basename $SHELL)..."
@@ -43,7 +44,7 @@ if [ $# -eq 0 ]; then # no arguments are provided
   done
 else
   FILE="$(ls $ROOT_DIR/shells/$1*)"
-  echo "Running $FILE..."
+  print_info "Running sub shell $FILE..."
   sh $FILE
 fi
 

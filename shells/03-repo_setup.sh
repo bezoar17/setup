@@ -1,7 +1,44 @@
 #!/usr/bin/env bash
 
 # Uses $DEV_DIR defined in install.sh
-# Setup github with a gpg or ssh key
+
+# if .ssh is not present, start ssh key creation in a subshell
+if [[ ! -d "$HOME/.ssh" ]]; then
+  (
+    print_info "~/.ssh folder not found, keys will be setup as instructed in \n
+    https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent."
+
+    ask_for_confirmation "Proceed ?"
+
+    ask_for_confirmed_input "Enter your email: " # sets $input after confirmation
+    email=$input
+
+    print_info "Creating an ssh key ......"
+
+    ssh-keygen -t rsa -b 4096 -C "$email"
+
+    print_success "Created ssh key ......"
+
+    print_info "Adding key to ssh-agent ......"
+
+    eval "$(ssh-agent -s)"
+
+    print_info "Updating ssh config ......"
+
+    echo "Host *
+      AddKeysToAgent yes
+      UseKeychain yes
+      IdentityFile ~/.ssh/id_rsa" > ~/.ssh/config
+
+    ssh-add -K ~/.ssh/id_rsa
+
+    print_success "Completed ......"
+
+    print_info "Now add the key to your github account, https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account"
+    read -p "Waiting ..... press enter to continue ... "
+    exit
+  )
+fi
 
 echo "=> Setting up development repos"
 

@@ -7,6 +7,21 @@ ask() {
   read
 }
 
+ask_for_confirmed_input() {
+  while true; do
+    read -p "$1" input
+    printf "You entered: $input\n"
+    print_info "Is this correct?"
+    read -n 1
+    printf "\n"
+    case $REPLY in
+      [Yy]* ) break;;
+      [Nn]* ) echo "Please enter it again";;
+      * ) echo "Please answer, yes or no"
+    esac
+  done
+}
+
 ask_for_confirmation() {
   while true; do
     print_question "$1 (y/n) "
