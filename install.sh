@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
-
+# config related
 REPO_NAME="setup"
 DEV_DIR="Development"
+MACKUP_PATH_FROM_HOME=".hallows"
+# config related
+
 ROOT_DIR="$(cd "$(dirname "$0")"; pwd -P)"
 
 cd $ROOT_DIR

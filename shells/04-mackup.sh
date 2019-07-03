@@ -12,15 +12,15 @@ fi
 
 print_info "Copying latest settings..."
 
-# copy the mackup configs first
-cp "$ROOT_DIR/.hallows/Mackup/.mackup.cfg" "$HOME"
-
-if [[ -d "$ROOT_DIR/.hallows/Mackup/.mackup" ]]; then
-  cp -r "$ROOT_DIR/.hallows/Mackup/.mackup" "$HOME"
+# copy the mackup configs first, .mackup.cfg tells mackup where to look
+cp "$ROOT_DIR/$MACKUP_PATH_FROM_HOME/Mackup/.mackup.cfg" "$HOME"
+# copy other mackup configs saved in .mackup
+if [[ -d "$ROOT_DIR/$MACKUP_PATH_FROM_HOME/Mackup/.mackup" ]]; then
+  cp -r "$ROOT_DIR/$MACKUP_PATH_FROM_HOME/Mackup/.mackup" "$HOME"
 fi
 
 # separately copy the folder
-cp -r "$ROOT_DIR/.hallows" "$HOME"
+cp -r "$ROOT_DIR/$MACKUP_PATH_FROM_HOME" "$HOME"
 
 print_info "Copy Completed..."
 
