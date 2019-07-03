@@ -27,17 +27,11 @@ export -f modify_line
 export -f insert_to_file_after_line_number
 export -f uncomment_line
 export -f prepend_string_to_file
+export -f ask_for_confirmation
 
 ask_for_sudo
 
-while true; do
-  ask_for_confirmation "Warning: This shell will overwrite your current workspace setup. Proceed?"
-  case $REPLY in
-    [Yy]* ) break;;
-    [Nn]* ) exit;;
-    * ) echo "Please answer, yes or no"
-  esac
-done
+ask_for_confirmation "Warning: This shell will overwrite your current workspace setup. Proceed?"
 
 print_info "Running sub-shells..."
 

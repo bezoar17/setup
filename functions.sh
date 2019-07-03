@@ -8,9 +8,16 @@ ask() {
 }
 
 ask_for_confirmation() {
-  print_question "$1 (y/n) "
-  read -n 1
-  printf "\n"
+  while true; do
+    print_question "$1 (y/n) "
+    read -n 1
+    printf "\n"
+    case $REPLY in
+      [Yy]* ) break;;
+      [Nn]* ) exit;;
+      * ) echo "Please answer, yes or no"
+    esac
+  done
 }
 
 ask_for_sudo() {
