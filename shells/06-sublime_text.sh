@@ -3,7 +3,6 @@
 echo "=> Sublime Text"
 
 DIR=$(echo "$HOME/Library/Application Support/Sublime Text 3")
-BASE_DIR=$(echo "$ROOT_DIR/config/sublime_text/Preferences.sublime-settings")
 
 print_info "Installing package control..."
 
@@ -18,17 +17,6 @@ then
 else
   print_success "Skipping..."
 fi
-
-# print_info "Updating default user preferences..."
-
-# if [[ -d "$DIR/Packages/User" ]]; then
-#   rm -rf "$DIR/Packages/User/Preferences.sublime-settings"
-# else
-#   mkdir "$DIR/Packages/User"
-# fi
-# cp "$BASE_DIR" "$DIR/Packages/User"
-
-# print_success "Completed..."
 
 print_info "Creating a shortcut for sublime_text as subl"
 
