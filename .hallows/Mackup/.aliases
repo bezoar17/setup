@@ -33,3 +33,4 @@ alias dc_run_bash='docker-compose exec run /bin/bash'
 # USE MACKUP TO UPDATE LATEST SETTINGS
 alias sync_mackup='cd ~/Development/setup && git co personal/kashyap && mackup backup && cp -r ~/.hallows/ ~/Development/setup/.hallows'
 alias push_mackup='cd ~/Development/setup && git co personal/kashyap && git add . && git ci -m "update mackup" && git ps'
+alias run_setup='cd ~/Development/setup && sh install.sh'
