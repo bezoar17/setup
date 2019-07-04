@@ -37,7 +37,7 @@ ask_for_confirmation "Warning: This shell will overwrite your current workspace 
 
 if [ $# -eq 0 ]; then # no arguments are provided
   print_info "Running all sub-shells..."
-  for SHELL in $ROOT_DIR/shells/*
+  for SHELL in $ROOT_DIR/shells/*.sh
   do
     print_info "Running $(basename $SHELL)..."
     sh $SHELL
@@ -47,6 +47,8 @@ else
   print_info "Running sub shell $FILE..."
   sh $FILE
 fi
+
+print_success ".............................. Installation has finished .............................."
 
 # NOTE: this should only be done for cases where this has to be run only once,
 # maybe for setting up new machines, hence deletion is delegated to index.sh
