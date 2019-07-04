@@ -31,5 +31,5 @@ alias dc_run_bash='docker-compose exec run /bin/bash'
 
 # CONDITIONAL BASED ON REPO NAMES ETC.
 # USE MACKUP TO UPDATE LATEST SETTINGS
-alias sync_setup='cd ~/Development/setup && git co personal/kashyap && mackup backup && cp -r ~/.hallows/ ~/Development/setup/.hallows'
-alias push_setup='cd ~/Development/setup && git co personal/kashyap && git add . && git ci -m "update mackup" && git ps'
+alias sync_mackup='cd ~/Development/setup && git co personal/kashyap && mackup backup && cp -r ~/.hallows/ ~/Development/setup/.hallows'
+alias push_mackup='cd ~/Development/setup && git co personal/kashyap && git add . && git ci -m "update mackup" && git ps'
