@@ -43,20 +43,24 @@ fi
 echo "=> Setting up development repos"
 
 # Start cloning repos
-for repo_info in $(jq -c '.[]' config/repos.json) # -c is compact mode
-do
-  git_url=$(echo $repo_info | jq -r '.git_url') # -r is for raw output(without quotes)
-  path=$(echo $repo_info | jq -r '.path')
-  repo_name=${git_url##*/} # last element after split('/')
-  repo_name=$(echo $repo_name | cut -d '.' -f 1) # first element after split('.')
+if [ -f "$ROOT_DIR/config/repos.json" ]; then
+  for repo_info in $(jq -c '.[]' config/repos.json) # -c is compact mode
+  do
+    git_url=$(echo $repo_info | jq -r '.git_url') # -r is for raw output(without quotes)
+    path=$(echo $repo_info | jq -r '.path')
+    repo_name=${git_url##*/} # last element after split('/')
+    repo_name=$(echo $repo_name | cut -d '.' -f 1) # first element after split('.')
 
-  print_info "Cloning $git_url..."
+    print_info "Cloning $git_url..."
 
-  # if path is null, move to dev_dir, else move to the path
-  if [ $path == "null" ]; then cd $DEV_DIR; else mkdir -p $DEV_DIR/$path; cd $DEV_DIR/$path; fi
+    # if path is null, move to dev_dir, else move to the path
+    if [ $path == "null" ]; then cd $DEV_DIR; else mkdir -p $DEV_DIR/$path; cd $DEV_DIR/$path; fi
 
-  # pull if repo present, else clone (: is equivalent of no-op)
-  if git -C $repo_name pull; then : ; else git clone $git_url; fi
+    # pull if repo present, else clone (: is equivalent of no-op)
+    if git -C $repo_name pull; then : ; else git clone $git_url; fi
 
-  print_success "Completed..."
-done
+    print_success "Completed..."
+  done
+else
+  print_success "No repo config found, skipping..."
+fi
