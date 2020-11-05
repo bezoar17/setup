@@ -1,8 +1,8 @@
 {
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/Neon Color Scheme/Neon.tmTheme",
+	"color_scheme": "Packages/Materialize/schemes/Material Solarized Light.tmTheme",
 	"font_face": "menlo",
-	"font_size": 13,
+	"font_size": 14,
 	"ignored_packages":
 	[
 		"Boxy Theme",

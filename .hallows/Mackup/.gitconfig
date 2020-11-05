@@ -57,6 +57,7 @@
   ps = push origin
   plr = pull --rebase
   cfg = config
+	stash-staged = "!bash -c \"git stash --keep-index; git stash push -m \"staged\" --keep-index; git stash pop stash@{1}\""
 
 [merge]
   keepBackup = false
