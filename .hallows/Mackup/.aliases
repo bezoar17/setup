@@ -11,23 +11,6 @@ alias sodafy='cd $TMPDIR/sodaplayer/data/torrent && cp -R . $HOME/Downloads/soda
 # https://gist.github.com/indiesquidge/ec010eca3ffa254788c2
 alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
 
-# ===============[DEV]===============
-# dash repo
-alias dash='cd $HOME/Development/dash'
-
-# fe_build command
-alias fe_build='cd $HOME/Development/dash/fe && npm run dev:ruby-prod'
-
-# storybook
-alias fe_storybooks='cd $HOME/Development/dash/fem && npm run storybook'
-
-# docker related commands
-alias dc_bash='docker-compose exec app /bin/bash'
-
-# docker related commands
-alias dc_run_bash='docker-compose exec run /bin/bash'
-# ===============[DEV]===============
-
 
 # CONDITIONAL BASED ON REPO NAMES ETC.
 # USE MACKUP TO UPDATE LATEST SETTINGS
