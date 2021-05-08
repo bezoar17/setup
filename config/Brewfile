@@ -16,6 +16,9 @@ brew 'asciinema'
 brew 'awscli'
 brew 'jq'
 
+# dev related packages
+brew 'nvm'
+
 # Casks
 cask 'sublime-text'
 cask 'visual-studio-code'
@@ -37,7 +40,7 @@ cask 'spectacle'
 # cask 'handbrake'
 # cask 'mounty'
 # cask 'kindle'
-cask 'flux'
+# cask 'flux'
 # cask 'vlc'
 # cask 'soda-player'
 # cask 'zoomus'

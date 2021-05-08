@@ -10,7 +10,7 @@
 		"Vintage"
 	],
 	"tab_size": 2,
-	"theme": "Material Dracula.sublime-theme",
+	"theme": "Default.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true
 }

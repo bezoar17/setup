@@ -1,3 +1,12 @@
 {
-    "codestream.email": "vaibhavbkashyap@gmail.com"
+    "codestream.email": "vaibhavbkashyap@gmail.com",
+    "editor.fontFamily": "menlo",
+    "editor.fontSize": 14,
+    "editor.tabSize": 2,
+    "files.trimTrailingWhitespace": true,
+    "editor.formatOnPaste": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "workbench.colorTheme": "BeardedTheme Solarized Light",
+    "workbench.iconTheme": "material-icon-theme"
 }
